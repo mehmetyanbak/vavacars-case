@@ -1,0 +1,22 @@
+<div
+  class="book-list-wrapper"
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  fxLayoutGap="6px"
+>
+  <select onchange="filterCategories($event)" [(ngModel)]="selectedCategory" (ngModelChange)="filterCategories($event)">
+    <option selected>{{all}}</option>
+    <option *ngFor="let category of categories" [ngValue]="category">
+      {{ category }}
+    </option>
+  </select>
+
+  <div class="book-list" fxFlex>
+    <div class="book-card" *ngFor="let book of books" (click)="navigateToDetail(book)">
+      <img src="{{ book.coverImageUrl }}" width="250px" height="390px" />
+      <div><b>Title</b> {{ book.title }}</div>
+      <div><b>Author</b> {{ book.author }}</div>
+    </div>
+  </div>
+  <button class="open-add-book-dialog" matTooltip="Add Book" (click)="openAddBookDialog()">+</button>
+</div>

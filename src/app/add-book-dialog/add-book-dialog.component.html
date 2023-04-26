@@ -1,0 +1,28 @@
+<section class="add-book-dialog-wrapper" fxLayout="column">
+  <h1 class="header">New Book</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p fxLayout="column" >
+      <label>Title</label>
+      <input type="text" formControlName="title" />
+    </p>
+    <p fxLayout="column">
+      <label>Author</label>
+      <input type="text" formControlName="author" />
+    </p>
+    <p fxLayout="column">
+        <label>Category</label>
+        <input type="text" formControlName="category" />
+      </p>
+      <p fxLayout="column">
+        <label>Cover Image Url</label>
+        <input type="text" formControlName="coverImageUrl" />
+      </p>
+      <p fxLayout="column">
+        <label>Description</label>
+        <textarea rows="3" formControlName="description"></textarea>
+      </p>
+    <p>
+      <button type="submit" [disabled]="!form.valid">Submit</button>
+    </p>
+  </form>
+</section>
