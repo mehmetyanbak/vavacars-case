@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/b794379b-e07e-4172-8ccf-376d392c887c/resourceGroups/rg2/providers/Microsoft.Web/sites/vavacarsbooklist",
+  "appService.deploySubpath": "dist\\vavacars-case"
+}
