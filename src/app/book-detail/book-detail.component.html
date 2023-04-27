@@ -1,9 +1,11 @@
-<div class="book-list" fxFlex>
-    <div class="book-card" >
-      <img src="{{ book.coverImageUrl }}" width="250px" height="390px" />
-      <div><b>Title</b> {{ book.title }}</div>
-      <div><b>Author</b> {{ book.author }}</div>
-      <div><b>Category</b> {{ book.category }}</div>
-      <div><b>Description</b> {{ book.description }}</div>
+<div fxFlex>
+  <div class="book-detail-card" fxLayout="row" fxLayoutGap="18px">
+    <img src="{{ book.coverImageUrl }}" width="250px" height="390px" />
+    <div fxLayout="column" fxLayoutGap="8px">
+      <div><b>Title :</b> {{ book.title }}</div>
+      <div><b>Author :</b> {{ book.author }}</div>
+      <div><b>Category : </b> {{ book.category }}</div>
+      <div><b>Description : </b> {{ book.description }}</div>
     </div>
   </div>
+</div>

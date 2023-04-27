@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book } from 'src/core/models';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BookService {
   booksUrl = '/api/books';
@@ -24,6 +23,8 @@ export class BookService {
   }
 
   getBooksByCategoryId(category: string) {
-    return this.http.get<Array<Book>>(`${'/api/getBooksByCategoryId'}/${category}`);
+    return this.http.get<Array<Book>>(
+      `${'/api/getBooksByCategoryId'}/${category}`
+    );
   }
 }

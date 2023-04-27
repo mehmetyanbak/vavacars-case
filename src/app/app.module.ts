@@ -11,9 +11,10 @@ import mockServer from './app.mock';
 import { BookService } from 'src/shared/services';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AddBookDialogComponent } from './add-book-dialog/add-book-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/shared/shared.module';
 
 mockServer();
 @NgModule({
@@ -21,7 +22,7 @@ mockServer();
     AppComponent,
     BookDetailComponent,
     BookListComponent,
-    AddBookDialogComponent
+    AddBookDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +34,10 @@ mockServer();
     MatTooltipModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [BookService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

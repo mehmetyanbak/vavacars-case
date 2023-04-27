@@ -23,20 +23,22 @@ select {
 .book-card {
   max-width: 250px;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .open-add-book-dialog {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: aqua;
+  height: 32px;
+  background-color: #14bdad;
   color: white;
-  border-radius: 50%;
   border: none;
   cursor: pointer;
-  font-size: xx-large;
+  border-radius: 8px;
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 1350px) {

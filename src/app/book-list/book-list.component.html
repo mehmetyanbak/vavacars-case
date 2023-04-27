@@ -1,9 +1,4 @@
-<div
-  class="book-list-wrapper"
-  fxLayout="column"
-  fxLayoutAlign="space-around center"
-  fxLayoutGap="6px"
->
+<div class="book-list-wrapper" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="6px">
   <select onchange="filterCategories($event)" [(ngModel)]="selectedCategory" (ngModelChange)="filterCategories($event)">
     <option selected>{{all}}</option>
     <option *ngFor="let category of categories" [ngValue]="category">
@@ -18,5 +13,6 @@
       <div><b>Author</b> {{ book.author }}</div>
     </div>
   </div>
-  <button class="open-add-book-dialog" matTooltip="Add Book" (click)="openAddBookDialog()">+</button>
+  <button class="open-add-book-dialog" matTooltip="Add Book" (click)="openAddBookDialog()">Add New Book</button>
+  <app-loading-indicator [show]="showLoadingIndicator"></app-loading-indicator>
 </div>
